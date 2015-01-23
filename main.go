@@ -3,10 +3,11 @@ package main
 import (
            "strings"
            "github.com/PuerkitoBio/goquery"
-           "github.com/usami/slackcli/slack"
+           "github.com/dongjujang/slackchat-cus"
 )
 
 func chat_downlink() {
+  webhook_url := "https://hooks.slack.com/services/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"
 
   doc, _ := goquery.NewDocument("http://www.torrentbest.net/bbs/board.php?bo_table=torrent_kortv_ent")
 
@@ -30,7 +31,7 @@ func chat_downlink() {
 
 //      com := "<" + link + "|" + subject + ">"
         slack_chat := slack.BuildPayload("#test-channel", "Korea-tv", "", "", link)
-        slack.Post(slack_chat)
+        slack.Post(webhook_url, slack_chat)
       }
     })
   })  
