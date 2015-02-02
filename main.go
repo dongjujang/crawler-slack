@@ -7,7 +7,7 @@ import (
 )
 
 func chat_downlink() {
-  webhook_url := "https://hooks.slack.com/services/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"
+  webhook_url := "WEBHOOK URL"
 
   doc, _ := goquery.NewDocument("http://www.torrentbest.net/bbs/board.php?bo_table=torrent_kortv_ent")
 
